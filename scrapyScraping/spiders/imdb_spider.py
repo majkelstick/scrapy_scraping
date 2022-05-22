@@ -27,7 +27,6 @@ class IMDBSpider(CrawlSpider):
         for movie in response.css('.lister-item-header a'):
             item = IMDBItem()
             item['title'] = movie.css('a::text').get()
-            # (you will need to change it in items.py as well)
             item['page_url']= "http://imdb.com"+movie.css('a::attr(href)').get()
             request = scrapy.Request(item['page_url'], callback=self.parseMovieDetails)
             request.meta['item'] = item
