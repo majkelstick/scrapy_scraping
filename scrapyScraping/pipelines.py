@@ -2,9 +2,8 @@
 #
 # Don't forget to add your pipeline to the ITEM_PIPELINES setting
 # See: https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-import os
 
-# useful for handling different item types with a single interface
+import os
 from itemadapter import ItemAdapter
 from scrapy.exporters import JsonItemExporter
 from scrapyScraping.items import JobOpeningItem

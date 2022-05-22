@@ -7,8 +7,6 @@ from scrapyScraping.items import IMDBItem
 class IMDBSpider(CrawlSpider):
     name = 'imdb'
     rules = (
-        # extract links at the bottom of the page. note that there are 'Prev' and 'Next'
-        # links, so a bit of additional filtering is needed
         Rule(LinkExtractor(restrict_xpaths=('//*[@class="desc"]/a')),
             process_links=lambda links: filter(lambda l: 'Next' in l.text, links),
             callback='parse_page',
