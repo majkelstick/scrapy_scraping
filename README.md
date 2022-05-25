@@ -16,11 +16,7 @@ python -m venv venv
 pip install Scrapy
 `
 
-Może być dodatkowo konieczne dodanie uprawnień do wykonywania skryptów jeśli korzystasz z PyCharma:
 
-`
-Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted
-`
 
 ### Linux
 
@@ -31,6 +27,15 @@ python -m venv venv
 `
 source venv/bin/activate
 `
+
+`
+pip install Scrapy
+`
+
+## Pycharm 
+
+Podczas tworzenia projektu wybrać opcję nowego projektu korzystającego z virtualenv,
+a następnie wpisać polecenie
 
 `
 pip install Scrapy
@@ -55,6 +60,7 @@ Uruchomimenie spidera:
 `
 scrapy crawl spider_name [-o output_file] [-a arg1=value1 arg2=value2]
 `
+
 
 
 # Zadania
